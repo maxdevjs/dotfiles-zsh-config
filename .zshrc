@@ -194,6 +194,9 @@ export EDITOR=nvim
 alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
 export PATH=$PATH:$HOME/bin
 
+# zimfw
+alias zu="zmanage update"
+
 # yadm
 alias ya="yadm add "
 alias yc="yadm commit"
