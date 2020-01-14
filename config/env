@@ -1,0 +1,28 @@
+# CONFIGS declared in .zshenv
+if [[ -f $CONFIGS/env_config_load ]]; then
+  . $CONFIGS/env_config_load
+fi
+
+#
+# User configuration sourced by interactive shells
+#
+stty -ixon # Disable ctrl-s and ctrl-q
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Sanity check for 'rm *'
+setopt RM_STAR_WAIT
+setopt appendhistory autocd extendedglob nomatch notify
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+#zstyle :compinstall filename '/home/max/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
