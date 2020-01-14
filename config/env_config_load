@@ -1,0 +1,19 @@
+list_config_files_to_load=('env_aliases' 'env_apps_fzf' 'env_icons' 'env_paths' 'env_paths_dev' 'env_zim')
+
+load_config_files() {
+  file="$1"
+  if [[ -f "$file" ]]; then
+    #echo loading $file
+    . $file
+  else
+    echo Configs - $file missing.
+  fi
+}
+
+for file in $list_config_files_to_load; do
+  load_config_files $CONFIGS/$file
+done;
+
+unset load_config_files
+unset list_config_files_to_load
+
