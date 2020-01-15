@@ -1,0 +1,5 @@
+clear lock
+!keycode 66 = Caps_Lock
+!keycode 110 = Home
+keycode 66 = Home
+
