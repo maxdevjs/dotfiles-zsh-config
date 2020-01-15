@@ -12,7 +12,10 @@ alias md="sudo mount -t cifs -o credentials=$HOME/System/win-credentials,uid=$(i
 alias ud="sudo umount ~/System/dotfiles-160"
 
 alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
-export PATH=$PATH:$HOME/bin
+alias t=tmux
+alias ta="t a -t"
+alias tl="t ls"
+alias tn="t new -t"
 
 # zimfw
 alias zu="zmanage update"
