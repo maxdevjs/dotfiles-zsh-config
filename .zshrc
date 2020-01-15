@@ -1,5 +1,5 @@
 # CONFIGS declared in .zshenv
-if [[ -f $CONFIGS/env ]]; then
-  . $CONFIGS/env
+if [[ -f $ZSH_CONFIGS/env ]]; then
+  . $ZSH_CONFIGS/env
 fi
 

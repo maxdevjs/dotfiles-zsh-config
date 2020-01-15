@@ -11,7 +11,7 @@ load_config_files() {
 }
 
 for file in $list_config_files_to_load; do
-  load_config_files $CONFIGS/$file
+  load_config_files $ZSH_CONFIGS/$file
 done;
 
 unset load_config_files

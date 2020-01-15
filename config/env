@@ -1,6 +1,8 @@
-# CONFIGS declared in .zshenv
-if [[ -f $CONFIGS/env_config_load ]]; then
-  . $CONFIGS/env_config_load
+
+
+# ZSH_CONFIGS declared in .zshenv
+if [[ -f $ZSH_CONFIGS/env_config_load ]]; then
+  . $ZSH_CONFIGS/env_config_load
 fi
 
 #
