@@ -1,6 +1,2 @@
 export PATH=$PATH:$HOME/bin
 
-export TERMINAL=kitty
-export SUDO_ASKPASS=/usr/bin/gnome-ssh-askpass
-export EDITOR=nvim
-
