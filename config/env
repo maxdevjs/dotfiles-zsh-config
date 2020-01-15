@@ -1,4 +1,10 @@
 
+# FIX - both two following commands spawn a display '' message in tty 
+# Need to open a terminal
+#[[ -f ${ZDOTDIR}/.Xmodmap ]] && xmodmap ${ZDOTDIR}/.Xmodmap
+# Switched to .zshenv
+#  For xterm, otherwise the first time it is opened does not read .Xresources config
+#xrdb -merge $HOME/.config/zsh/.Xresources
 
 # ZSH_CONFIGS declared in .zshenv
 if [[ -f $ZSH_CONFIGS/env_config_load ]]; then
