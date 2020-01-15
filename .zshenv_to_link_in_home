@@ -1,0 +1,8 @@
+# The mother of all canonical zsh startup files
+# .zshenv -> .zprofile if login -> .zshrc if interactive -> .zlogin if login -> .zlogout /shrug
+
+#https://www.reddit.com/r/zsh/comments/3ubrdr/proper_way_to_set_zdotdir/
+
+XDG_CONFIG_HOME=$HOME/.config
+ZDOTDIR=$XDG_CONFIG_HOME/zsh
+. $ZDOTDIR/.zshenv
