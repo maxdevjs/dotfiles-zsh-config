@@ -1,5 +1,4 @@
 # vi mode
-bindkey -v
 export KEYTIMEOUT=1
 
 # Fix backspace bug when switching modes
@@ -11,19 +10,19 @@ bindkey "^?" backward-delete-char
 
 zle-keymap-select () {
 if [ $KEYMAP = vicmd ]; then
-    printf "\033[2 q"
+  printf "\033[2 q"
 else
-    printf "\033[6 q"
+  printf "\033[6 q"
 fi
 }
 zle -N zle-keymap-select
 zle-line-init () {
-zle -K viins
-printf "\033[6 q"
+  zle -K viins
+  printf "\033[6 q"
 }
 zle -N zle-line-init
-bindkey -v
 
+bindkey -v
 # In case of issues
 # https://unix.stackexchange.com/questions/433273/changing-cursor-style-based-on-mode-in-both-zsh-and-vim/500077
 
