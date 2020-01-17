@@ -6,6 +6,7 @@ alias :q=exit
 
 if [ -x $(command -v lsd > /dev/null 2>&1) ]
 then
+  alias ls=lsd
   alias la="lsd -lAh"
 else
   alias la="ls -lAh"
