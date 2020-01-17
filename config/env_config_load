@@ -1,4 +1,4 @@
-list_config_files_to_load=('env_aliases' 'env_apps_fzf' 'env_icons' 'env_paths' 'env_paths_dev' 'env_zim')
+list_config_files_to_load=('env_zim' 'env_aliases' 'env_apps_fzf' 'env_icons' 'env_paths' 'env_paths_dev')
 
 load_config_files() {
   file="$1"
