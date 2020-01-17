@@ -1,0 +1,29 @@
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Fix backspace bug when switching modes
+bindkey "^?" backward-delete-char
+
+# Change cursor shape for different vi modes.
+
+# https://unix.stackexchange.com/questions/547/make-my-zsh-prompt-show-mode-in-vi-mode/344028#344028
+
+zle-keymap-select () {
+if [ $KEYMAP = vicmd ]; then
+    printf "\033[2 q"
+else
+    printf "\033[6 q"
+fi
+}
+zle -N zle-keymap-select
+zle-line-init () {
+zle -K viins
+printf "\033[6 q"
+}
+zle -N zle-line-init
+bindkey -v
+
+# In case of issues
+# https://unix.stackexchange.com/questions/433273/changing-cursor-style-based-on-mode-in-both-zsh-and-vim/500077
+
