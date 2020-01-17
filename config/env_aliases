@@ -20,11 +20,15 @@ alias uc="sudo umount ~/Study/Courses"
 alias md="sudo mount -t cifs -o credentials=$HOME/System/win-credentials,uid=$(id -u),gid=$(id -g),dir_mode=0777,file_mode=0777 //192.168.0.160/dotfiles ~/System/dotfiles-160"
 alias ud="sudo umount ~/System/dotfiles-160"
 
-alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
-alias t=tmux
-alias ta="t a -t"
-alias tl="t ls"
-alias tn="t new -t"
+if [ -x $(command -v tmux > /dev/null 2>&1) ]
+then
+  alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
+  alias t=tmux
+  alias ta="t a -t"
+  alias tk="tmux kill-server"
+  alias tl="t ls"
+  alias tn="t new -t"
+fi
 
 # zimfw
 alias zu="zmanage update"
