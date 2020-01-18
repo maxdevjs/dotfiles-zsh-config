@@ -30,6 +30,6 @@ HISTFILE=$HOME/.cache/zsh/.zhistory
 #SAVEHIST=10000
 
 # vi mode
-. $ZSH_CONFIGS/env_vi_mode
+#. $ZSH_CONFIGS/env_vi_mode
 
 
