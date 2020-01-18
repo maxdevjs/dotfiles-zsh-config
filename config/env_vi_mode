@@ -1,8 +1,13 @@
 # vi mode
 export KEYTIMEOUT=1
+bindkey -v
+# In case of issues
+# https://unix.stackexchange.com/questions/433273/changing-cursor-style-based-on-mode-in-both-zsh-and-vim/500077
 
 # Fix backspace bug when switching modes
 bindkey "^?" backward-delete-char
+
+bindkey "^R" history-incremental-search-backward
 
 # Change cursor shape for different vi modes.
 
@@ -22,7 +27,5 @@ zle-line-init () {
 }
 zle -N zle-line-init
 
-bindkey -v
-# In case of issues
-# https://unix.stackexchange.com/questions/433273/changing-cursor-style-based-on-mode-in-both-zsh-and-vim/500077
+
 
