@@ -1,4 +1,4 @@
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # fzf + rg
 if [[ -x "$(command -v fzf)" && -x "$(command -v rg)" ]]; then
