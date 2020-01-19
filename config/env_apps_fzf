@@ -1,14 +1,10 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# fzf + rg
-if [[ -x "$(command -v fzf)" && -x "$(command -v rg)" ]]; then
-  export FZF_DEFAUL_COMMAND='rg --files --hidden --smart-case --glob=\!{.git/,node_modules/}'
-  export FZF_CTRL_T_COMMAND="${FZF_DEFAUL_COMMAND}"
-  export FZF_ALT_C_COMMAND="${FZF_DEFAUL_COMMAND}"
-  export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+if [[ -f $XDG_CONFIG_HOME/shells/commons/fzf_setup ]]; then
+  . $XDG_CONFIG_HOME/shells/commons/fzf_setup
 fi
 
-if [[ -f $CONFIGS/env_apps_fzf_void ]]; then
-  . $CONFIGS/env_apps_fzf_void
-fi
+#if [[ -f $CONFIGS/env_apps_fzf_void ]]; then
+#  . $CONFIGS/env_apps_fzf_void
+#fi
 
