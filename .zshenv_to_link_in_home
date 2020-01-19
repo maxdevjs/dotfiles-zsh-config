@@ -4,5 +4,8 @@
 #https://www.reddit.com/r/zsh/comments/3ubrdr/proper_way_to_set_zdotdir/
 
 XDG_CONFIG_HOME=$HOME/.config
-ZDOTDIR=$XDG_CONFIG_HOME/zsh
+ZDOTDIR=$XDG_CONFIG_HOME/shells/zsh
+ZSH_CONFIGS=$HOME/.config/shells/zsh/config
+SHELL_COMMONS=$XDG_CONFIG_HOME/shells/commons
 . $ZDOTDIR/.zshenv
+
