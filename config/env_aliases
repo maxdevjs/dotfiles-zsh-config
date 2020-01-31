@@ -3,6 +3,9 @@
 alias c=clear
 alias e=exit
 alias :q=exit
+command -v nvim >/dev/null && alias vim="nvim"
+alias yt="youtube-dl --add-metadata -i"
+alias yv="youtube-viewer"
 
 # System
 alias cp="cp -iv"
