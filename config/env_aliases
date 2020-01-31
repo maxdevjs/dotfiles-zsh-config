@@ -1,9 +1,11 @@
 
-# 
+# Personal
 alias c=clear
 alias e=exit
 alias :q=exit
 
+# System
+alias cp="cp -iv"
 if [ -x $(command -v lsd > /dev/null 2>&1) ]
 then
   alias ls=lsd
@@ -11,8 +13,9 @@ then
 else
   alias la="ls -lAh"
 fi
-
+alias mv="mv -iv"
 alias o="xdg-open"
+alias rm="rm -dvI"
 
 # Samba
 #https://linuxize.com/post/how-to-mount-cifs-windows-share-on-linux/
@@ -20,6 +23,8 @@ alias mc="sudo mount -t cifs -o credentials=$HOME/System/win-credentials,uid=$(i
 alias uc="sudo umount ~/Study/Courses"
 alias md="sudo mount -t cifs -o credentials=$HOME/System/win-credentials,uid=$(id -u),gid=$(id -g),dir_mode=0777,file_mode=0777 //192.168.0.160/dotfiles ~/System/dotfiles-160"
 alias ud="sudo umount ~/System/dotfiles-160"
+alias mp="sudo mount -t cifs -o credentials=$HOME/System/win-credentials,uid=$(id -u),gid=$(id -g),dir_mode=0777,file_mode=0777 //192.168.0.161/Public ~/System/dotfiles-160"
+alias up="sudo umount ~/System/dotfiles-160"
 
 if [ -x $(command -v tmux > /dev/null 2>&1) ]
 then
