@@ -1,24 +1,37 @@
+# Development
+alias \
+  g=git
 
 # Personal
-alias c=clear
-alias e=exit
-alias :q=exit
-command -v nvim >/dev/null && alias vim="nvim"
-alias yt="youtube-dl --add-metadata -i"
-alias yv="youtube-viewer"
-
+alias \
+  c=clear \
+  alias e=exit \
+  alias :q=exit \
+  
 # System
-alias cp="cp -iv"
+command -v nvim >/dev/null && alias vim="nvim"
+# https://github.com/LukeSmithxyz/voidrice/blob/master/.config/aliasrc
+mpv="mpv --input-ipc-server=/tmp/mpvsock$(date +%s)" 
 if [ -x $(command -v lsd > /dev/null 2>&1) ]
 then
-  alias ls=lsd
-  alias la="lsd -lAh"
+  alias \
+    ls=lsd
+    alias la="lsd -lAh"
 else
   alias la="ls -lAh"
 fi
-alias mv="mv -iv"
-alias o="xdg-open"
-alias rm="rm -dvI"
+
+alias \
+  cp="cp -iv" \
+  mv="mv -iv" \
+  o="xdg-open" \
+  rm="rm -dvI" \
+  yt="youtube-dl --add-metadata -i" \
+  yv="youtube-viewer" \
+  xi="sudo xbps-install" \
+  xq="xbps-query -Rs" \
+  xr="sudo xbps-remove -R" \
+  xu="sudo xbps-install -Su" \
 
 # Samba
 #https://linuxize.com/post/how-to-mount-cifs-windows-share-on-linux/
