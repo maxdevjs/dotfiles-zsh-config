@@ -22,6 +22,7 @@ else
 fi
 
 alias \
+  br="br -dp"
   cp="cp -iv" \
   mv="mv -iv" \
   o="xdg-open" \
