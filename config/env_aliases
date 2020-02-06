@@ -1,6 +1,7 @@
 # Development
 alias \
-  g=git
+  g=git \
+  gs="git status" \
 
 # Personal
 alias \
@@ -22,7 +23,7 @@ else
 fi
 
 alias \
-  br="br -dp"
+  br="br -dp" \
   cp="cp -iv" \
   mv="mv -iv" \
   o="xdg-open" \
@@ -30,7 +31,8 @@ alias \
   yt="youtube-dl --add-metadata -i" \
   yv="youtube-viewer" \
   xi="sudo xbps-install" \
-  xq="xbps-query -Rs" \
+  xqq="xbps-query -Rs" \
+  xqqnf="xbps-query -Mi --repo=https://alpha.de.repo.voidlinux.org/current/nonfree -s \*" \
   xr="sudo xbps-remove -R" \
   xu="sudo xbps-install -Su" \
 
